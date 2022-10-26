@@ -1,0 +1,204 @@
+body{
+    background-color: azure;
+    
+    margin: 0%;
+}
+a:hover{
+    background-color: azure;
+
+}
+
+
+.nav{
+    width: 100vw;
+    height: 10vh;
+   background-color: black;
+    display: flex;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+    
+
+}
+
+    
+
+.im{
+    width: 15vw;
+    height: 10vh;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: rgb(254, 254, 255);
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    
+}
+.login{
+    width: 15vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(11, 12, 12);
+
+}
+.su{
+    border-radius: 8px;
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    width: 40vw;
+    height: 5vh;
+    display: flex;
+    background-color: rgb(10, 9, 9);
+    color: rgb(243, 242, 242);
+    align-items: center;
+    justify-content: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.parent{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+}
+.main{
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    animation: image 5s infinite alternate;
+
+
+}
+.text{
+    width: 50vw;
+    height: 15vh;
+    animation: test 3s infinite alternate;
+    font-size: larger;
+    font-family:   Arial, sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+
+}
+.back{
+    width: 50vw;
+    height: 80vh;
+   background-image: url("https://images.unsplash.com/photo-1614091199036-e934784dbf0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dWJlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.but{
+    border-radius: 8px;
+    color: aliceblue;
+    display: flex;
+    font-family:  Tahoma ;
+    font-size: 25px;
+    border-color: aqua;
+    
+
+}
+.but:hover{
+    background-color: rgb(13, 11, 7);
+    cursor: pointer;
+}
+.black{
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    
+}
+.hea{
+    height:15vh;
+    width: 100vw;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-family: franklin;
+    font-size: 45px;
+    border-radius: 7px;
+    border: 3px sloid;
+    border-color: azure;
+
+}
+.con{
+    width: 35vw;
+    height: 25vh;
+    color: white;
+    display: flex;
+    justify-content:flex-start;
+    padding-top: 10px;
+    font-family: franklin;
+    font-size: 10pxpx;
+    border-radius: 7px;
+    border: 3px sloid;
+    border-color: azure;
+}
+.ch{
+    width: 35vw;
+    height: 25vh;
+    color: white;
+    display: flex;
+    justify-content:flex-start;
+    padding-top: 10px;
+    font-family: franklin;
+    font-size: 10pxpx;
+    border-radius: 7px;
+    border: 3px sloid;
+    border-color: azure;
+
+}
+.footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(181, 185, 211, 0.53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+
+    
+    
+}
+
+  @keyframes image {
+    0% {
+      background-image: url('https://unsplash.it/600/600');
+    }
+    
+    
+    100% {
+      background-image: url('https://unsplash.it/601/601');
+    }
+  }
+  @keyframes test {
+   from{color: #000;}
+   to{color: rgb(244, 242, 242);}
+  }
