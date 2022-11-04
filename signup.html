@@ -1,0 +1,123 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCbW_qjn4Bvio0XE1d6reG7FC_4D1ry8ttGg&usqp=CAU);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #loginform input:invalid{
+            border-color: red;
+        }
+        .parent{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: flex-end;
+        }
+        input{
+            border-color: blue;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+   
+    <div class="container-fluid" style="min-height: 60vh;width: 40vw; color: rgb(51, 80, 170);">
+        <div class="row">
+            <!-- <div class="col-sm-3 bg-primary"></div> -->
+            <div class="col-sm-6 offset-sm-3">
+                <h1 class="text-center">Signup</h1>
+                
+                <form name="loginform" id="loginform" onsubmit="validate(event)">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Name" minlength="5" maxlength="50" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="me@example.com" minlength="5" maxlength="50" required>
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control"  minlength="8" maxlength="25" required>
+                    </div>
+                    <div>
+                        <label>Confirm Password</label>
+                        <input type="password" name="cpassword" class="form-control"  minlength="8" maxlength="25" required>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-primary shadow" id="btn-login">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" crossorigin="anonymous">
+        </script>
+    
+    <script>
+        var name = document.forms['loginform']['name'];
+        console.log(name);
+        var email = document.forms['loginform']['email'];
+        var password = document.forms['loginform']['password'];
+        var cpassword = document.forms['loginform']['cpassword'];
+        var btn = document.getElementById('btn-login');
+
+        function validate(e){
+            e.preventDefault();
+        }
+
+        document.querySelectorAll('#loginform input').forEach(e=>{
+            e.addEventListener('keyup', function(event){
+                var isValid = true;
+
+                if(name.value == ""){
+                    isValid=false;
+                }
+                if(!email.validity.valid || !password.validity.valid){
+                    isValid = false;
+                }
+
+                if(password.value != cpassword.value){
+                    isValid = false;
+                    console.log('invalid password')
+                }
+                
+
+                if(!isValid){
+                    btn.setAttribute('disabled', true)
+                }
+                else{
+                    btn.removeAttribute('disabled');
+                }
+            })
+        });
+        
+    </script>
+</body>
+
+</html>

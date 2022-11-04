@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cab manageent</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
 </head>
 
@@ -19,46 +22,98 @@
         </div>
         <div class="login">
             <div class="su">
-                <a href="login.html" style="text-decoration: none; color: rgb(8, 9, 9);">Signup</a>
+                <a href="signup.html" style="text-decoration: none; color: rgb(8, 9, 9);">Signup</a>
             </div>
         </div>
         <div class="cont">
-            contact us
+            <a href="contact.html" style="text-decoration: none;color: aliceblue;">contact us</a>
+            
 
         </div>
 
     </div>
     <div class="parent">
         <div class="main">
-            <div class="text">
+            <div class="text1">
                 <b>Safe journey with CAB</b>
             </div>
 
         </div>
 
         <div class="back">
-            <div class="but">Lets go CAB</div>
+            <div class="but"><a href="book.html" style="text-decoration:none ;color: black;" >BOOK CAB</a></div>
 
         </div>
     </div>
-    <div class="black">
-        <div class="hea"><b>Your local taxis now on Uber</b></div>
-        <div class="con">
-            <pre>Choice
-            Get the ride that’s right for you in just a few taps.</pre>
-        </div>
-        <div class="ch">
-            <pre>Choice
-            Get the ride that’s right for you in just a few taps.</pre>
+    
 
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            
+            <img src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=600"
+                >
+            <div class="text"  style="color:rgb(59, 24, 134);">Premium Cabs</div>
         </div>
 
+        <div class="mySlides fade">
+            
+            <img src="https://images.pexels.com/photos/11766899/pexels-photo-11766899.jpeg?auto=compress&cs=tinysrgb&w=600"
+                >
+            <div class="text" style="color:rgb(31, 123, 91);">Share cab</div>
+        </div>
+
+        <div class="mySlides fade">
+            
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQACHT_VtqAzPxGgIbgGsbyTW9q-EbHv737cA&usqp=CAU" style="min-height: 50vh;">
+            <div class="text"  style="color:rgb(73, 140, 171);">CAB XL</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
 
     </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-    <div class="footer">The ride options on this page are a sample of Uber’s products, and some might not be available
-        where you use the Uber app. If you check your city’s web page or look in the app, you’ll see what rides you can
-        request.</div>
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    
 
 
 
